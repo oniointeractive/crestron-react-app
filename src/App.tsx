@@ -8,15 +8,21 @@ function App() {
   return (
     <div className="App">
       <h1>React Playground</h1>
-      <div className="ButtonList">
+      <div className="Button-list">
         <p>Background Color</p>
-        <Button>Red</Button>
-        <Button>Green</Button>
-        <Button>Blue</Button>
+        <Button className="Button" size="lg">
+          Red
+        </Button>
+        <Button className="Button" size="lg">
+          Green
+        </Button>
+        <Button className="Button" size="lg">
+          Blue
+        </Button>
       </div>
       <div className="Slider">
         <p>Opacity</p>
-        <Slider></Slider>
+        <Slider sx={{ width: 800 }} defaultValue={100}></Slider>
       </div>
     </div>
   );

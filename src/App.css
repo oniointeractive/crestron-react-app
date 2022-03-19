@@ -9,3 +9,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+
+.Button-list {
+  padding: 25px;
+  background-color: rgb(253, 67, 67);
+  margin: 40px;
+  border-radius: 48px;
+  width: 800px;
+}
+
+.Button {
+  margin: 0px 20px 20px 20px;
+  height: 80px;
+  width: 150px;
+}
