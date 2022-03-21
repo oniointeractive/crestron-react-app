@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@crestron/ch5-crcomlib": "^1.2.0",
+    "@crestron/ch5-utilities-cli": "^0.1.52",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.5.1",
