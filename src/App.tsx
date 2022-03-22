@@ -3,6 +3,23 @@ import "./App.css";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "@mui/material/Slider";
+import {
+  bridgeReceiveIntegerFromNative,
+  bridgeReceiveBooleanFromNative,
+  bridgeReceiveStringFromNative,
+  bridgeReceiveObjectFromNative,
+} from "@crestron/ch5-crcomlib";
+
+import { publishEvent } from "@crestron/ch5-crcomlib";
+
+(window as any)["bridgeReceiveIntegerFromNative"] =
+  bridgeReceiveIntegerFromNative;
+(window as any)["bridgeReceiveBooleanFromNative"] =
+  bridgeReceiveBooleanFromNative;
+(window as any)["bridgeReceiveStringFromNative"] =
+  bridgeReceiveStringFromNative;
+(window as any)["bridgeReceiveObjectFromNative"] =
+  bridgeReceiveObjectFromNative;
 
 function App() {
   const [color, setColor] = useState("253, 67, 67");
@@ -12,26 +29,29 @@ function App() {
   const setSliderValue = (value: number) => {
     setOpacity(value / 100);
     setBackground(`rgba(${color}, ${value / 100})`);
-    console.log(value);
+    publishEvent("n", "1", value);
     return `${value}`;
   };
 
   const setRedBackground = () => {
     setColor("253, 67, 67");
     setBackground(`rgba(253, 67, 67, ${opacity})`);
-    console.log("Red Button has been pressed!");
+    publishEvent("b", "1", true);
+    publishEvent("b", "1", false);
   };
 
   const setGreenBackground = () => {
     setColor("132, 202, 19");
     setBackground(`rgba(132, 202, 19, ${opacity})`);
-    console.log("Green Button has been pressed!");
+    publishEvent("b", "2", true);
+    publishEvent("b", "2", false);
   };
 
   const setYellowBackground = () => {
     setColor("232, 213, 44");
     setBackground(`rgba(232, 213, 44, ${opacity})`);
-    console.log("Yellow Button has been pressed!");
+    publishEvent("b", "3", true);
+    publishEvent("b", "3", false);
   };
 
   return (
