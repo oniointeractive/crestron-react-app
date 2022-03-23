@@ -11,6 +11,10 @@ import {
 } from "@crestron/ch5-crcomlib";
 
 import { publishEvent } from "@crestron/ch5-crcomlib";
+import {
+  useSubscribeAnalog,
+  useSubscribeSerial,
+} from "@norgate-av/react-hooks";
 
 (window as any)["bridgeReceiveIntegerFromNative"] =
   bridgeReceiveIntegerFromNative;
@@ -22,6 +26,9 @@ import { publishEvent } from "@crestron/ch5-crcomlib";
   bridgeReceiveObjectFromNative;
 
 function App() {
+  const opacityValue = useSubscribeAnalog("1");
+  const textResponse = useSubscribeSerial("1");
+
   const [color, setColor] = useState("253, 67, 67");
   const [opacity, setOpacity] = useState(1);
   const [background, setBackground] = useState("rgba(253, 67, 67, 1");
@@ -58,7 +65,7 @@ function App() {
     <div className="App">
       <h1>React Playground</h1>
       <div className="Button-list" style={{ backgroundColor: background }}>
-        <p>Background Color</p>
+        <p>{textResponse === "" ? "Red Background Color" : textResponse}</p>
         <Button className="Button" size="lg" onClick={setRedBackground}>
           Red
         </Button>
@@ -70,7 +77,7 @@ function App() {
         </Button>
       </div>
       <div className="Slider">
-        <p>Opacity</p>
+        <p>Opacity: {textResponse === "" ? "100" : opacityValue}%</p>
         <Slider
           sx={{ width: 800 }}
           defaultValue={100}
