@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="./img/frontend.png" width="800px" align="center" alt="Crestron React Final UI"></img>
+  <img src="./img/frontend.jpg" width="800px" align="center" alt="Crestron React Final UI"></img>
 </p>
 
-## crestron-react-app
+## Crestron React App
 
 This project is made as a part of the Crestron full-stack tutorial.
 In this project, I combined React on frontend, and SIMPL#Pro on backend, and this project can serve you as a playground for your ideas, and for testing purposes. 
