@@ -10,6 +10,8 @@ Be aware that I didn't always use the best practices in the tutorial, so have th
 
 ## Install
 
+After you cloned the project, run the following command in the terminal:
+
 ```bash
 npm install
 ````
