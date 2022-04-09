@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img/frontend.jpg" width="800px" align="center" alt="Crestron React Final UI"></img>
+  <img src="./img/frontend.png" width="800px" align="center" alt="Crestron React Final UI"></img>
 </p>
 
 ## Crestron React App
@@ -37,5 +37,5 @@ Launches the build, archive, and deploy scripts, and uploads it to your touchscr
 You can see in the picture below that there are 6 signals in the project. The frontend is sending 3 digital (boolean) signals and 1 analog (number) signal. Also, it's receiving 1 analog (number) signal and 1 serial (string) signal.
 
 <p align="center">
-  <img src="./img/signals.png" width="800px" align="center" alt="Crestron signals between React and SIMPL Sharp Pro"></img>
+  <img src="./img/signals.jpg" width="800px" align="center" alt="Crestron signals between React and SIMPL Sharp Pro"></img>
 </p>
