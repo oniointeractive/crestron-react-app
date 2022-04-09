@@ -28,6 +28,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:archive": "ch5-cli archive -p ch5-react -P samplesource=ch5-react -d build -o dist",
+    "deploy": "ch5-cli deploy -p -H 192.168.1.101 -t touchscreen dist/ch5-react.ch5z",
+    "deploy:one-step": "npm run build && npm run build:archive && npm run deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "patch-package"
